@@ -10,8 +10,8 @@ const About = () => {
         </div>
         <div className="col-md-8">
           <p>
-            Pankaj Aliquam erat volutpat. Duis ac turpis. Donec sit
-            amet eros. Lorem ipsum dolor sit amet, consectetuer
+            Pankaj Batham Aliquam erat volutpat. Duis ac turpis. Donec
+            sit amet eros. Lorem ipsum dolor sit amet, consectetuer
             adipiscing elit. Mauris fermentum dictum magna. Sed
             laoreet aliquam leo. Ut tellus dolor, dapibus eget,
             elementum vel, cursus eleifend, elit. Aenean auctor wisi
