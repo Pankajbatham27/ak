@@ -1,0 +1,15 @@
+.header-logo img {
+    max-width: 145px;
+}
+.header {
+    text-align: center;
+    padding: 32px 0;
+}
+.navCenter{
+    display: flex;
+    justify-content: center;
+}
+.navCenter a {
+    text-transform: uppercase;
+    font-size: 13px;
+}

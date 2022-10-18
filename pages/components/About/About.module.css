@@ -1,0 +1,42 @@
+.about{
+    margin: 80px 0;
+}
+.aboutRight{
+    position: relative;
+}
+
+
+.About_aboutRight__20DTf::before {
+    content: "";
+    height: 52px;
+    width: 185px;
+    background: #000;
+    position: absolute;
+}
+
+.aboutRight::before {
+    content: "";
+    height: 52px;
+    width: 185px;
+    background-image: url('./../../../public/images/design.jpg');
+    position: absolute;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;top: -26px;
+    right: 0;
+}
+
+
+.aboutRight {
+    text-align: right;
+}
+
+.aboutRight img{
+    max-width: 100%;
+    filter: grayscale(1);
+    transition: .3s ease-in-out;
+}
+
+.about:hover img{
+    filter: grayscale(0);
+}

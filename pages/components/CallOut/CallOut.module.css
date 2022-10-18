@@ -1,0 +1,22 @@
+.customHandle {
+    background: none !important;
+    border: none !important;
+    top: -22px !important;
+    outline: 0 !important;
+}
+
+.customHandle img {
+    width: 50px;
+}
+
+.slideHandle::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url('./../../../public/images/174879.png');
+    position: absolute;
+    background-size: cover;
+    top: -22px;
+    left: -9px;
+    background-color: #fff;
+}
