@@ -10,6 +10,7 @@ const Testimonials = () => {
         auto: false,
       });
     }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

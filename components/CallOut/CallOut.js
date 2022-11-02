@@ -4,17 +4,20 @@ import sliderImage from './../../public/images/img_524387.png';
 
 const CallOut = () => {
   useEffect(() => {
-    $('#slider').slider({
-      value: 50,
-      slide: function (event, ui) {
-        if (ui.value < 4) {
-          window.open(
-            'https://api.whatsapp.com/send/?phone=8963957654&text=Hi+there&app_absent=0',
-            '_blank'
-          );
-        }
-      },
-    });
+    const timer = setTimeout(() => {
+      $('#slider').slider({
+        value: 50,
+        slide: function (event, ui) {
+          if (ui.value < 4) {
+            window.open(
+              'https://api.whatsapp.com/send/?phone=8963957654&text=Hi+there&app_absent=0',
+              '_blank'
+            );
+          }
+        },
+      });
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
