@@ -1,0 +1,25 @@
+.lightSlider li {
+    text-align: center;
+}
+
+.innerTest {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.lightSlider li p i {
+    position: absolute;
+    left: -50px;
+    font-size: 50px;
+    top: -13px;
+    opacity: .2;
+}
+.lightSlider li p{
+    position: relative;
+}
+.lightSlider li h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+}

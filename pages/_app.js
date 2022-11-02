@@ -12,8 +12,6 @@ function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
         ></link>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"></link>
-
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -46,10 +44,17 @@ function MyApp({ Component, pageProps }) {
           async
         ></script>
 
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"
-          async
-        ></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
+        ></link>
+
+        <script src="https://jhinichadariya.com/assets/front/lightslider.min.js"></script>
+
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        ></link>
       </Head>
 
       <Component {...pageProps} />
