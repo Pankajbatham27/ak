@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Service from '../components/Service/Service';
+import Testimonials from '../components/Testimonials/Testimonials';
 import styles from '../styles/Home.module.css';
 import About from './../components/About/About';
 import CallOut from './../components/CallOut/CallOut';
@@ -14,6 +16,8 @@ export default function Home() {
         <Hero />
         <About />
         <CallOut />
+        <Service />
+        <Testimonials />
       </div>
     </>
   );

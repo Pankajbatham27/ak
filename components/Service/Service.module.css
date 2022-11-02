@@ -1,0 +1,54 @@
+.service_container{
+    margin: 80px 0;
+}
+.serviceBlock figure {
+    position: relative;
+}
+
+.serviceBlock figure figcaption {
+    position: absolute;
+    top: 68%;
+    left: 15px;
+    transform: translate(0%, -50%);
+    z-index: 1;
+}
+.serviceBlock figure figcaption a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    background: rgba(255,255,255,0);
+}
+
+.serviceBlock figure::before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #00000059;
+    position: absolute;
+    z-index: 1;
+}
+
+.serviceBlock figure {
+    color: #fff;
+    overflow: hidden;
+}
+
+.serviceBlock figure img{
+    transition: .3s ease-in-out;
+}
+.serviceBlock figure:hover img{
+    transform: scale(1.2);
+}
+.serviceBlock {
+    margin: 4px 0;
+}
