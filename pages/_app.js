@@ -30,29 +30,10 @@ function MyApp({ Component, pageProps }) {
           href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
         />
 
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-          async
-        ></script>
-
-        <script
-          src="https://code.jquery.com/jquery-3.6.0.js"
-          async
-        ></script>
-        <script
-          src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
-          async
-        ></script>
-
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
         ></link>
-
-        <script
-          src="https://jhinichadariya.com/assets/front/lightslider.min.js"
-          async
-        ></script>
 
         <link
           rel="stylesheet"

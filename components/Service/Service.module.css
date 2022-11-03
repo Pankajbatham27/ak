@@ -3,6 +3,7 @@
 }
 .serviceBlock figure {
     position: relative;
+    border-radius: 20px;
 }
 
 .serviceBlock figure figcaption {
@@ -44,7 +45,7 @@
 }
 
 .serviceBlock figure img{
-    transition: .3s ease-in-out;
+    transition: .8s ease-in-out;
 }
 .serviceBlock figure:hover img{
     transform: scale(1.2);

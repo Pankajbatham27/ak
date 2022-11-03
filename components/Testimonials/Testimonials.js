@@ -9,7 +9,7 @@ const Testimonials = () => {
         pager: false,
         auto: false,
       });
-    }, 500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 

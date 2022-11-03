@@ -15,7 +15,7 @@
     left: -50px;
     font-size: 50px;
     top: -13px;
-    opacity: .2;
+    opacity: .1;
 }
 .lightSlider li p{
     position: relative;
@@ -29,4 +29,10 @@
     .lightSlider li p i {
         display: none;
     }
-  }
+}
+
+.lightSlider li h3::before {
+    content: "-------------";
+    margin-right: 10px;
+    letter-spacing: -3px;
+}

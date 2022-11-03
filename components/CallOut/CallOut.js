@@ -16,7 +16,7 @@ const CallOut = () => {
           }
         },
       });
-    }, 500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
