@@ -49,7 +49,10 @@ function MyApp({ Component, pageProps }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
         ></link>
 
-        <script src="https://jhinichadariya.com/assets/front/lightslider.min.js"></script>
+        <script
+          src="https://jhinichadariya.com/assets/front/lightslider.min.js"
+          async
+        ></script>
 
         <link
           rel="stylesheet"
