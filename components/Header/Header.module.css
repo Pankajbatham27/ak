@@ -13,3 +13,10 @@
     text-transform: uppercase;
     font-size: 13px;
 }
+.navbar-nav {
+    flex-direction: initial;
+}
+
+.navbar-nav a:not(:last-child) {
+    margin-right: 14px;
+}
