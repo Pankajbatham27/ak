@@ -1,8 +1,10 @@
 import classes from './Header.module.css';
 import Script from 'next/script';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter();
   return (
     <header className={classes.header}>
       <Script src="https://code.jquery.com/jquery-3.6.0.js" />
@@ -21,15 +23,32 @@ const Header = () => {
             <div className="" id="navbarNavAltMarkup">
               <div className="navbar-nav">
                 <Link href="/">
-                  <a className="nav-link active" aria-current="page">
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/' ? 'active' : ''
+                    }`}
+                    aria-current="page"
+                  >
                     Home
                   </a>
                 </Link>
                 <Link href="/about">
-                  <a className="nav-link">About</a>
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/about' ? 'active' : ''
+                    }`}
+                  >
+                    About
+                  </a>
                 </Link>
                 <Link href="#">
-                  <a className="nav-link">Contact</a>
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/contact' ? 'active' : ''
+                    }`}
+                  >
+                    Contact
+                  </a>
                 </Link>
               </div>
             </div>
