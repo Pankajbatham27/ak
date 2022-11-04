@@ -19,7 +19,7 @@ export default function Home() {
         <CallOut />
         <Service />
         <Testimonials />
-        <Video />
+        {/* <Video /> */}
       </div>
     </>
   );

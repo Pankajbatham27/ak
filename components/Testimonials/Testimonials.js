@@ -2,16 +2,16 @@ import { useEffect } from 'react';
 import classes from './Testimonials.module.css';
 
 const Testimonials = () => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      $('#lightSlider').lightSlider({
-        item: 1,
-        pager: false,
-        auto: false,
-      });
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     $('#lightSlider').lightSlider({
+  //       item: 1,
+  //       pager: false,
+  //       auto: false,
+  //     });
+  //   }, 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="">
