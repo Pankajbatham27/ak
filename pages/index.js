@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import Service from '../components/Service/Service';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Video from '../components/Video/Video';

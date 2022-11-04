@@ -13,6 +13,11 @@ function MyApp({ Component, pageProps }) {
         ></link>
 
         <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css"
+          rel="stylesheet"
+        ></link>
+
+        <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
         ></link>

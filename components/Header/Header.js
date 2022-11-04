@@ -8,32 +8,8 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <Script src="https://code.jquery.com/jquery-3.6.0.js" />
-      <Script
-        src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
-        onLoad={() => {
-          $('#slider').slider({
-            value: 50,
-            slide: function (event, ui) {
-              if (ui.value < 4) {
-                window.open(
-                  'https://api.whatsapp.com/send/?phone=8963957654&text=Hi+there&app_absent=0',
-                  '_blank'
-                );
-              }
-            },
-          });
-        }}
-      />
-      <Script
-        src="https://jhinichadariya.com/assets/front/lightslider.min.js"
-        onLoad={() => {
-          $('#lightSlider').lightSlider({
-            item: 1,
-            pager: false,
-            auto: false,
-          });
-        }}
-      />
+      <Script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" />
+      <Script src="https://jhinichadariya.com/assets/front/lightslider.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" />
       <div className={classes['header-logo']}>
         <img
@@ -72,6 +48,18 @@ const Header = () => {
                     }`}
                   >
                     Contact
+                  </a>
+                </Link>
+
+                <Link href="/service/1">
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/service/[serviceid]'
+                        ? 'active'
+                        : ''
+                    }`}
+                  >
+                    Service
                   </a>
                 </Link>
               </div>
