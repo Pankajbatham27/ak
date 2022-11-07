@@ -7,7 +7,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/03.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/21260"
               alt="gallery-post"
               className="img-fluid"
             />
@@ -24,7 +24,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/06.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/202290"
               alt="gallery-post"
               className="img-fluid"
             />
@@ -41,7 +41,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/03.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/18650"
               alt="gallery-post"
               className="img-fluid"
             />
@@ -58,7 +58,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/03.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/321110"
               alt="gallery-post"
               className="img-fluid"
             />
@@ -75,7 +75,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/03.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/212860"
               alt="gallery-post"
               className="img-fluid"
             />
@@ -92,7 +92,7 @@ const AllService = () => {
         <div className={classes.serviceBlock}>
           <figure>
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/album/03.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/85330"
               alt="gallery-post"
               className="img-fluid"
             />

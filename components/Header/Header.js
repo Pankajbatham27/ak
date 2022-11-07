@@ -12,10 +12,12 @@ const Header = () => {
       <Script src="https://jhinichadariya.com/assets/front/lightslider.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" />
       <div className={classes['header-logo']}>
-        <img
-          src="https://themes.pixelwars.org/photographer-html/images/site/logo.png"
-          alt="ak brothers photography logo"
-        />
+        <Link href="/">
+          <img
+            src="https://themes.pixelwars.org/photographer-html/images/site/logo.png"
+            alt="ak brothers photography logo"
+          />
+        </Link>
       </div>
       <div className={classes.navCenter}>
         <nav className="navbar navbar-expand-lg navbar-light">
@@ -41,16 +43,6 @@ const Header = () => {
                     About
                   </a>
                 </Link>
-                <Link href="#">
-                  <a
-                    className={`${'nav-link'} ${
-                      router.pathname == '/contact' ? 'active' : ''
-                    }`}
-                  >
-                    Contact
-                  </a>
-                </Link>
-
                 <Link href="/service/1">
                   <a
                     className={`${'nav-link'} ${
@@ -60,6 +52,15 @@ const Header = () => {
                     }`}
                   >
                     Service
+                  </a>
+                </Link>
+                <Link href="/contact">
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/contact' ? 'active' : ''
+                    }`}
+                  >
+                    Contact
                   </a>
                 </Link>
               </div>

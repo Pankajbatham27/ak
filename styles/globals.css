@@ -24,3 +24,10 @@ p {
 .navbar-nav a:not(:last-child) {
   margin-right: 14px;
 }
+
+.cs-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}

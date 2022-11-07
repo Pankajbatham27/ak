@@ -45,7 +45,7 @@ const About = () => {
               alt="ak photography about"
             /> */}
             <img
-              src="https://themes.pixelwars.org/photographer-html/images/gallery/04.jpg"
+              src="https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/allimgs/202290"
               alt="ak photography about"
             />
           </div>

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Footer from '../components/Footer/Footer';
 import Service from '../components/Service/Service';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Video from '../components/Video/Video';
@@ -22,6 +23,7 @@ export default function Home() {
         <Testimonials />
         {/* <Video /> */}
       </div>
+      <Footer />
     </>
   );
 }

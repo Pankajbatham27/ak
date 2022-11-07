@@ -1,0 +1,61 @@
+section.contactForm .heading {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 32px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 32px;
+    padding-bottom: 7px;
+}
+
+section.contactForm input, section.contactForm textarea {
+    padding: 0.8em;
+    width: 100%;
+    font-size: .875em;
+    line-height: 1;
+    color: #333;
+    border: 3px solid #eee;
+    border-radius: 0;
+    background: #fff;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+section.contactForm label {
+    font-size: 12px;
+}
+
+
+section.contactForm .marginContact {
+    margin-bottom: 24px;
+}
+
+
+section.contactForm button {
+    display: inline-block;
+    position: relative;
+    padding: 1.5em 2.5em;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    outline: 0;
+    background: #fff;
+    border: 3px solid #333;
+    color: #333;
+    text-transform: uppercase;
+    text-shadow: none;
+    border-radius: 0;
+    transition: .3s ease-in-out;
+}
+
+section.contactForm button:hover {
+    background: #333;
+    color: #fff;
+}
+
+section.contactForm textarea:focus, section.contactForm input:focus, section.contactForm select:focus {
+    border-color: #555;
+    outline: 0;
+    box-shadow: none;
+}

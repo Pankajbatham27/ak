@@ -8,6 +8,9 @@ const Testimonials = () => {
         item: 1,
         pager: false,
         auto: false,
+        onSliderLoad: function () {
+          $('#lightSlider').removeClass('cs-hidden');
+        },
       });
     }, 1000);
     return () => clearTimeout(timer);
@@ -15,7 +18,10 @@ const Testimonials = () => {
 
   return (
     <div className="">
-      <ul id="lightSlider" className={classes.lightSlider}>
+      <ul
+        id="lightSlider"
+        className={`${classes.lightSlider} cs-hidden`}
+      >
         <li>
           <div className={classes.innerTest}>
             <p>

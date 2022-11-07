@@ -3,15 +3,16 @@
 }
 .serviceBlock figure {
     position: relative;
-    border-radius: 20px;
+    
 }
 
 .serviceBlock figure figcaption {
-    position: absolute;
+    /* position: absolute;
     top: 68%;
     left: 15px;
     transform: translate(0%, -50%);
-    z-index: 1;
+    z-index: 1; */
+    color: #000;
 }
 .serviceBlock figure figcaption a{
     position: absolute;
@@ -29,14 +30,20 @@
 }
 
 .serviceBlock figure::before {
-    content: "";
+    /* content: "";
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background: #00000059;
     position: absolute;
-    z-index: 1;
+    z-index: 1; */
+}
+
+.serviceBlock figure figcaption h2 {
+    font-size: 23px;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .serviceBlock figure {
@@ -46,10 +53,12 @@
 
 .serviceBlock figure img{
     transition: .8s ease-in-out;
+    width: 100%;
+    border-radius: 20px;
 }
-.serviceBlock figure:hover img{
+/* .serviceBlock figure:hover img{
     transform: scale(1.2);
-}
+} */
 .serviceBlock {
     margin: 4px 0;
 }
