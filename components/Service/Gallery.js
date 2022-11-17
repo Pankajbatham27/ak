@@ -23,11 +23,11 @@ const Gallery = (props) => {
         {props.serviceImage.map((item, key) => (
           <article
             key={key}
-            href={`https://res.cloudinary.com/professional-clickers/image/upload/${item.image}`}
+            href={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
           >
             <div className="grid-item-holder hov_zoom">
               <img
-                src={`https://res.cloudinary.com/professional-clickers/image/upload/c_scale,w_400/v1/${item.image}`}
+                src={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
                 alt=""
               />
             </div>

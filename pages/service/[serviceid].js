@@ -7,7 +7,7 @@ const ServiceDetails = () => {
 
   async function getdata() {
     const response = await fetch(
-      'http://localhost/tune/service/wedding-photography'
+      'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography'
     );
     const res = await response.json();
     setServiceImage(res);

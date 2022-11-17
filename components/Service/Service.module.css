@@ -92,7 +92,7 @@
 .allPost article {
     display: inline-block;
     
-    margin: 0 0 6px;
+    margin: 0 0 15px;
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -104,3 +104,29 @@
     width: 100%;
 }
 /* =========== */
+
+
+section.all_services .fullbg {
+    height: 100vh;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    max-width: 100%;
+    background-size: cover !important;
+}
+
+section.all_services .fullbg:first-child {
+    height: 77vh;
+}
+.contentService{
+    max-width: 80%;
+    margin: auto;
+    color: #fff;
+    text-align: justify;
+}
+.customBtn{
+    max-width: 150px;
+    color: #fff;
+}
+.customBtn:focus, .customBtn:hover{
+    color: #fff;
+}

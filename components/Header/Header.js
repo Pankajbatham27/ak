@@ -2,7 +2,7 @@ import classes from './Header.module.css';
 import Script from 'next/script';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import logo from './../../public/images/logo.png';
 const Header = () => {
   const router = useRouter();
   return (
@@ -14,8 +14,9 @@ const Header = () => {
       <div className={classes['header-logo']}>
         <Link href="/">
           <img
-            src="https://themes.pixelwars.org/photographer-html/images/site/logo.png"
+            src={logo.src}
             alt="ak brothers photography logo"
+            height={128}
           />
         </Link>
       </div>
@@ -43,15 +44,13 @@ const Header = () => {
                     About
                   </a>
                 </Link>
-                <Link href="/service/1">
+                <Link href="/services">
                   <a
                     className={`${'nav-link'} ${
-                      router.pathname == '/service/[serviceid]'
-                        ? 'active'
-                        : ''
+                      router.pathname == '/services' ? 'active' : ''
                     }`}
                   >
-                    Service
+                    Services
                   </a>
                 </Link>
                 <Link href="/contact">
