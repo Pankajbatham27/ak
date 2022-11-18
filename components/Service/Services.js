@@ -10,7 +10,7 @@ const Services = () => {
       'https://akbrothersphotography.com/apicontroller/all_services'
     );
     const res = await response.json();
-    console.log(res);
+
     setServices(res);
   }
   useEffect(() => {

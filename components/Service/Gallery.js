@@ -1,21 +1,9 @@
-import classes from './Service.module.css';
-import Script from 'next/script';
 import { useEffect } from 'react';
+import classes from './Service.module.css';
 
 const Gallery = (props) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      lightGallery(document.getElementById('animated-thumbnails'), {
-        thumbnail: true,
-      });
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, [props]);
-
   return (
     <div className="container">
-      <Script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js" />
-
       <div
         id="animated-thumbnails"
         className={`${classes.masonry} ${classes.allPost}`}
@@ -23,11 +11,11 @@ const Gallery = (props) => {
         {props.serviceImage.map((item, key) => (
           <article
             key={key}
-            href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
+            href={`http://localhost/tune/uploads/gallery/${item.image}`}
           >
             <div className="grid-item-holder hov_zoom">
               <img
-                src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
+                src={`http://localhost/tune/uploads/gallery/medium/${item.image}`}
                 alt=""
               />
             </div>

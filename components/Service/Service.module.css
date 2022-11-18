@@ -130,3 +130,6 @@ section.all_services .fullbg:first-child {
 .customBtn:focus, .customBtn:hover{
     color: #fff;
 }
+.all_services{
+    min-height: 100vh;
+}
