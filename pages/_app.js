@@ -29,7 +29,12 @@ function MyApp({ Component, pageProps }) {
         ></link>
 
         <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css"
+          href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lightgallery.css"
+          rel="stylesheet"
+        ></link>
+
+        <link
+          href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-thumbnail.css"
           rel="stylesheet"
         ></link>
 
@@ -50,11 +55,6 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
           href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
         />
-
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
-        ></link>
 
         <link
           rel="stylesheet"

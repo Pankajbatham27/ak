@@ -5,6 +5,9 @@ import Footer from './../../components/Footer/Footer';
 import { useRouter } from 'next/router';
 import lightGallery from 'lightgallery';
 
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+
 // import Script from 'next/script';
 const ServiceDetails = () => {
   const [serviceImage, setServiceImage] = useState([]);
@@ -28,7 +31,13 @@ const ServiceDetails = () => {
 
     setTimeout(() => {
       const lg = document.getElementById('animated-thumbnails');
-      var plugin = lightGallery(lg);
+      var plugin = lightGallery(lg, {
+        plugins: [lgThumbnail],
+        toggleThumb: true,
+        speed: 500,
+        thumbnail: true,
+        download: false,
+      });
       setSlider(plugin);
     }, 1000);
   }
