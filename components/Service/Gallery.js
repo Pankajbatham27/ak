@@ -1,7 +1,7 @@
 import classes from './Service.module.css';
 import Script from 'next/script';
 import { useEffect } from 'react';
-import Service from './Service';
+
 const Gallery = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -10,7 +10,7 @@ const Gallery = (props) => {
       });
     }, 1000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [props]);
 
   return (
     <div className="container">
@@ -23,11 +23,11 @@ const Gallery = (props) => {
         {props.serviceImage.map((item, key) => (
           <article
             key={key}
-            href={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
+            href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
           >
             <div className="grid-item-holder hov_zoom">
               <img
-                src={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
+                src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
                 alt=""
               />
             </div>
