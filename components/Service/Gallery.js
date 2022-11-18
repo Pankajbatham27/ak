@@ -11,11 +11,11 @@ const Gallery = (props) => {
         {props.serviceImage.map((item, key) => (
           <article
             key={key}
-            href={`http://localhost/tune/uploads/gallery/${item.image}`}
+            href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
           >
             <div className="grid-item-holder hov_zoom">
               <img
-                src={`http://localhost/tune/uploads/gallery/medium/${item.image}`}
+                src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
                 alt=""
               />
             </div>

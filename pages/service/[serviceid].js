@@ -17,7 +17,7 @@ const ServiceDetails = () => {
   async function getdata() {
     const response = await fetch(
       // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography'
-      `http://localhost/tune/apicontroller/full_details/` +
+      `https://akbrothersphotography.com/apicontroller/full_details/` +
         router.query.serviceid
     );
     const res = await response.json();
@@ -45,7 +45,7 @@ const ServiceDetails = () => {
     const response = await fetch(
       // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography?page=' +
       //   page
-      `http://localhost/tune/apicontroller/full_details/${router.query.serviceid}?page=` +
+      `https://akbrothersphotography.com/apicontroller/full_details/${router.query.serviceid}?page=` +
         page
     );
     const res = await response.json();
