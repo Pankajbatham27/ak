@@ -34,3 +34,22 @@ p {
 .row {
   margin: 0;
 }
+
+.imageWall ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* width: 137px; */
+  /* height: 137px; */
+}
+
+.imageWall ul li {
+  width: 137px;
+  height: 137px;
+  overflow: hidden;
+  display: inline-table;
+}
+
+.imageWall ul li img {
+  max-width: 100%;
+}

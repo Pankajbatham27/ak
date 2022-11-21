@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <div className="container">
         <Hero />
+
         <About />
         <CallOut />
         <Service onlyTitle={true} />
