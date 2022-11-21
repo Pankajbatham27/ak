@@ -19,7 +19,7 @@ const AllService = (props) => {
   return (
     <div className={`row`}>
       {services.map((item, key) => (
-        <div className="col-md-4 gallery-grid">
+        <div key={key} className="col-md-4 gallery-grid">
           <div className={classes.serviceBlock}>
             {item.length != 0 ? (
               <figure>
