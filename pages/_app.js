@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
         ></link>
 
         <link
-          href="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/css/lg-thumbnail.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
           rel="stylesheet"
         ></link>
 

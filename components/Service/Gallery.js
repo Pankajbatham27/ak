@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect } from 'react';
 import classes from './Service.module.css';
 
@@ -10,6 +11,7 @@ const Gallery = (props) => {
       >
         {props.serviceImage.map((item, key) => (
           <article
+            data-sub-html={`<a href="/hashtag/${item.hashtag}">${item.hashtag}</a>`}
             key={key}
             href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
           >

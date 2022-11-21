@@ -104,7 +104,13 @@
     width: 100%;
 }
 /* =========== */
-
+.loaderServcie{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
 
 section.all_services .fullbg {
     height: 100vh;

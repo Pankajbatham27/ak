@@ -9,7 +9,7 @@ import lightGallery from 'lightgallery';
 // import lgZoom from 'lightgallery/plugins/zoom';
 
 // import Script from 'next/script';
-const ServiceDetails = () => {
+const HashtagDetails = () => {
   const [serviceImage, setServiceImage] = useState([]);
   const [totalPage, setTotalPage] = useState(0);
   const [page, setPage] = useState(1);
@@ -20,11 +20,11 @@ const ServiceDetails = () => {
   async function getdata() {
     const response = await fetch(
       // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography'
-      `https://akbrothersphotography.com/apicontroller/full_details/` +
-        router.query.serviceid
+      `https://akbrothersphotography.com/apicontroller/hashtag/` +
+        router.query.hashtag
     );
     const res = await response.json();
-
+    console.log(router.query.hashtag);
     setServiceImage(res.getallImages);
 
     setTotalPage(res.total_pages);
@@ -54,7 +54,7 @@ const ServiceDetails = () => {
     const response = await fetch(
       // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography?page=' +
       //   page
-      `https://akbrothersphotography.com/apicontroller/full_details/${router.query.serviceid}?page=` +
+      `https://akbrothersphotography.com/apicontroller/hashtag/${router.query.hashtag}?page=` +
         page
     );
     const res = await response.json();
@@ -72,10 +72,10 @@ const ServiceDetails = () => {
   }
 
   useEffect(() => {
-    if (router.query.serviceid) {
+    if (router.query.hashtag) {
       getdata();
     }
-  }, [router.query.serviceid]);
+  }, [router.query.hashtag]);
 
   return (
     <>
@@ -99,4 +99,4 @@ const ServiceDetails = () => {
     </>
   );
 };
-export default ServiceDetails;
+export default HashtagDetails;

@@ -19,7 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <CallOut />
-        <Service />
+        <Service onlyTitle={true} />
         <Testimonials />
         {/* <Video /> */}
       </div>
