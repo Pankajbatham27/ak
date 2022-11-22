@@ -25,30 +25,30 @@ const Gallery = (props) => {
   }, [props]);
 
   return (
-    <div className="container">
-      <Script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" />
-
+    <>
       {loaderShow && <Loader />}
-
-      <div
-        id="animated-thumbnails"
-        className={`grid ${classes.masonry} ${classes.allPost}`}
-      >
-        {props.serviceImage.map((item, key) => (
-          <div
-            data-sub-html={`<a href="/hashtag/${item.hashtag}">${item.hashtag}</a>`}
-            key={key}
-            href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
-            className="grid-item"
-          >
-            <img
-              src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
-              alt=""
-            />
-          </div>
-        ))}
+      <div className="container">
+        <Script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" />
+        <div
+          id="animated-thumbnails"
+          className={`grid ${classes.masonry} ${classes.allPost}`}
+        >
+          {props.serviceImage.map((item, key) => (
+            <div
+              data-sub-html={`<a href="/hashtag/${item.hashtag}">${item.hashtag}</a>`}
+              key={key}
+              href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
+              className="grid-item"
+            >
+              <img
+                src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
+                alt=""
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Gallery;
