@@ -35,6 +35,7 @@ const ServiceDetails = () => {
         // plugins: [lgThumbnail],
         toggleThumb: true,
         speed: 500,
+        preload: 3,
         // thumbnail: true,
         download: false,
       });
