@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import classes from './Service.module.css';
 
@@ -34,7 +35,9 @@ const AllService = (props) => {
                 <figcaption>
                   <h2>{item.name}</h2>
                   <p>{item.short_desp}</p>
-                  <a href={`/service/${item.slug}`}>View more</a>
+                  <Link href={`/service/${item.slug}`}>
+                    View more
+                  </Link>
                 </figcaption>
               </figure>
             ) : (

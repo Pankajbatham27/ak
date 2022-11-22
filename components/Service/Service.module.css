@@ -65,7 +65,7 @@
 
 /* ========= */
 
-@media only screen and (min-width: 700px) {
+/* @media only screen and (min-width: 700px) {
     .masonry {
         -moz-column-count: 2;
         -webkit-column-count: 2;
@@ -102,7 +102,7 @@
 
 .allPost article img {
     width: 100%;
-}
+} */
 /* =========== */
 .loaderServcie{
     height: 150px;
