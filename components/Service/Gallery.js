@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import classes from './Service.module.css';
+import Loader from './../Loader/Loader';
 
 import imagesLoaded from 'imagesloaded';
 import Script from 'next/script';
 // import Masonry from 'masonry-layout';
 
 const Gallery = (props) => {
+  const [loaderShow, setLoaderShow] = useState(true);
   useEffect(() => {
+    setLoaderShow(true);
     setTimeout(() => {
       imagesLoaded(
         document.querySelector('.grid'),
@@ -15,15 +18,18 @@ const Gallery = (props) => {
             // options
             itemSelector: '.grid-item',
           });
+          setLoaderShow(false);
         }
       );
-    }, 700);
+    }, 500);
   }, [props]);
 
   return (
     <div className="container">
-      {/* <Script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" /> */}
       <Script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" />
+
+      {loaderShow && <Loader />}
+
       <div
         id="animated-thumbnails"
         className={`grid ${classes.masonry} ${classes.allPost}`}
