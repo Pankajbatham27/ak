@@ -18,9 +18,9 @@ export default function Home(props) {
       <div className="container">
         <Hero />
 
-        <About />
+        <About data={props.aboutData.gettrecord} />
         <CallOut />
-        <Service data={props.data} onlyTitle={true} />
+        <Service data={props.serviceData} onlyTitle={true} />
         <Testimonials />
         {/* <Video /> */}
       </div>
@@ -35,7 +35,12 @@ export async function getServerSideProps() {
   );
   const data = await response.json();
 
+  const response1 = await fetch(
+    `${process.env.apiURl}apicontroller/about`
+  );
+  const data1 = await response1.json();
+
   return {
-    props: { data },
+    props: { serviceData: data, aboutData: data1 },
   };
 }
