@@ -37,11 +37,11 @@ const Gallery = (props) => {
             <div
               data-sub-html={`<a href="/hashtag/${item.hashtag}">${item.hashtag}</a>`}
               key={key}
-              href={`https://akbrothersphotography.com/uploads/gallery/${item.image}`}
+              href={`${process.env.apiURl}uploads/gallery/${item.image}`}
               className="grid-item"
             >
               <img
-                src={`https://akbrothersphotography.com/uploads/gallery/medium/${item.image}`}
+                src={`${process.env.apiURl}uploads/gallery/medium/${item.image}`}
                 alt=""
               />
             </div>

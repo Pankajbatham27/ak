@@ -5,7 +5,7 @@ const Service = (props) => {
     <div className={classes.service_container}>
       {props.onlyTitle && <h2>Our Professional Work</h2>}
       <div className="mt-3 mb-3">
-        <AllService onlyTitle={props.onlyTitle} />
+        <AllService data={props.data} onlyTitle={props.onlyTitle} />
       </div>
     </div>
   );

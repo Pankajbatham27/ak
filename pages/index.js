@@ -11,7 +11,7 @@ import CallOut from './../components/CallOut/CallOut';
 import Header from './../components/Header/Header';
 import Hero from './../components/Hero/Hero';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header />
@@ -20,11 +20,22 @@ export default function Home() {
 
         <About />
         <CallOut />
-        <Service onlyTitle={true} />
+        <Service data={props.data} onlyTitle={true} />
         <Testimonials />
         {/* <Video /> */}
       </div>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const response = await fetch(
+    `${process.env.apiURl}apicontroller/all_services`
+  );
+  const data = await response.json();
+
+  return {
+    props: { data },
+  };
 }

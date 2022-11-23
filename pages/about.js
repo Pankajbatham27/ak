@@ -5,7 +5,7 @@ import Service from '../components/Service/Service';
 import Testimonials from '../components/Testimonials/Testimonials';
 import About from './../components/About/About';
 import Header from './../components/Header/Header';
-export default function about() {
+export default function about(props) {
   return (
     <>
       <Header />
@@ -16,9 +16,20 @@ export default function about() {
         <div className="mt-5">
           <AboutMore />
         </div>
-        <Service onlyTitle={false} />
+        <Service data={props.data} onlyTitle={false} />
       </div>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const response = await fetch(
+    `${process.env.apiURl}apicontroller/all_services`
+  );
+  const data = await response.json();
+
+  return {
+    props: { data },
+  };
 }
