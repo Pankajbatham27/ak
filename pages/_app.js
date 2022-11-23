@@ -1,23 +1,7 @@
 import Head from 'next/head';
 import '../styles/globals.css';
 
-// import Router from 'next/router';
-// import { useState } from 'react';
-// import Loader from '../components/Loader/Loader';
-
 function MyApp({ Component, pageProps }) {
-  // const [loading, setLoading] = useState(false);
-
-  // Router.events.on('routeChangeStart', (url) => {
-  //   // console.log('start');
-  //   setLoading(true);
-  // });
-
-  // Router.events.on('routeChangeComplete', (url) => {
-  //   setLoading(false);
-  //   // console.log('end');
-  // });
-
   return (
     <>
       <Head>
