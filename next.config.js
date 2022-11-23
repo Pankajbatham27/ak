@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['localhost'],
+  env: {
+    // apiURl: 'http://localhost/tune/',
+    apiURl: 'https://akbrothersphotography.com/',
   },
 };
 

@@ -53,6 +53,15 @@ const Header = () => {
                     Services
                   </a>
                 </Link>
+                <Link href="/blogs">
+                  <a
+                    className={`${'nav-link'} ${
+                      router.pathname == '/blogs' ? 'active' : ''
+                    }`}
+                  >
+                    Blogs
+                  </a>
+                </Link>
                 <Link href="/contact">
                   <a
                     className={`${'nav-link'} ${
