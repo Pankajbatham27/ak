@@ -1,4 +1,6 @@
 import { useRef } from 'react';
+import $ from 'jquery';
+import jQuery from 'jquery';
 
 const Photowall = (props) => {
   const componentRef = useRef();
