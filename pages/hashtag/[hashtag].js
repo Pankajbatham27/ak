@@ -9,25 +9,20 @@ import lightGallery from 'lightgallery';
 // import lgZoom from 'lightgallery/plugins/zoom';
 
 // import Script from 'next/script';
-const HashtagDetails = () => {
+const HashtagDetails = (props) => {
+  const router = useRouter();
+
   const [serviceImage, setServiceImage] = useState([]);
   const [totalPage, setTotalPage] = useState(0);
   const [page, setPage] = useState(1);
-  const [slider, setSlider] = useState();
+  const [slider, setSlider] = useState(0);
 
-  const router = useRouter();
+  useEffect(() => {
+    setServiceImage(props.data.getallImages);
+  }, [props]);
 
-  async function getdata() {
-    const response = await fetch(
-      // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography'
-      `https://akbrothersphotography.com/apicontroller/hashtag/` +
-        router.query.hashtag
-    );
-    const res = await response.json();
-    console.log(router.query.hashtag);
-    setServiceImage(res.getallImages);
-
-    setTotalPage(res.total_pages);
+  useEffect(() => {
+    setTotalPage(props.data.total_pages);
 
     setTimeout(() => {
       const lg = document.getElementById('animated-thumbnails');
@@ -40,21 +35,11 @@ const HashtagDetails = () => {
       });
       setSlider(plugin);
     }, 1000);
-  }
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-
-  //   }, 1000);
-  //   return () => clearTimeout(timer);
-  // }, [serviceImage]);
+  }, []);
 
   async function getMoreData(page) {
-    // const data = { page: page };
     const response = await fetch(
-      // 'https://akbrothersphotography.com/apicontroller/full_details/wedding-photography?page=' +
-      //   page
-      `https://akbrothersphotography.com/apicontroller/hashtag/${router.query.hashtag}?page=` +
+      `${process.env.apiURl}apicontroller/hashtag/${router.query.hashtag}?page=` +
         page
     );
     const res = await response.json();
@@ -71,17 +56,10 @@ const HashtagDetails = () => {
     }, 1000);
   }
 
-  useEffect(() => {
-    if (router.query.hashtag) {
-      getdata();
-    }
-  }, [router.query.hashtag]);
-
   return (
     <>
       <Header />
-      {/* <Script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js" /> */}
-      <Gallery slider={slider} serviceImage={serviceImage} />
+      <Gallery serviceImage={serviceImage} />
 
       {totalPage > page ? (
         <div className="d-flex justify-content-center">
@@ -99,4 +77,15 @@ const HashtagDetails = () => {
     </>
   );
 };
+
+export async function getServerSideProps(context) {
+  const response = await fetch(
+    `${process.env.apiURl}apicontroller/hashtag/${context.params.hashtag}`
+  );
+  const data = await response.json();
+
+  return {
+    props: { data },
+  };
+}
 export default HashtagDetails;

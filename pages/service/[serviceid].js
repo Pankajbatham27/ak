@@ -55,7 +55,6 @@ const ServiceDetails = (props) => {
   return (
     <>
       <Header />
-      {/* <Script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/lightgallery.umd.js" /> */}
       <Gallery serviceImage={serviceImage} />
 
       {totalPage > page ? (
@@ -76,12 +75,6 @@ const ServiceDetails = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  // const response = await fetch(
-  //   `https://akbrothersphotography.com/apicontroller/full_details/${context.params.blogid}?page=` +
-  //     page
-  // );
-  // const data = await response.json();
-
   const response = await fetch(
     `${process.env.apiURl}apicontroller/full_details/${context.params.serviceid}`
   );

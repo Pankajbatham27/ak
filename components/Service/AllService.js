@@ -3,20 +3,6 @@ import { useEffect, useState } from 'react';
 import classes from './Service.module.css';
 
 const AllService = (props) => {
-  // const [services, setServices] = useState([]);
-
-  // async function getdata() {
-  //   const response = await fetch(
-  //     'https://akbrothersphotography.com/apicontroller/all_services'
-  //   );
-  //   const res = await response.json();
-
-  //   setServices(res);
-  // }
-  // useEffect(() => {
-  //   getdata();
-  // }, []);
-
   return (
     <div className={`row`}>
       {props.data.map((item, key) => (

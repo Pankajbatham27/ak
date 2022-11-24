@@ -8,9 +8,12 @@ import Script from 'next/script';
 
 const Gallery = (props) => {
   const [loaderShow, setLoaderShow] = useState(true);
+  const [scriptMasonry, setScriptMasonry] = useState(false);
+
   useEffect(() => {
     setLoaderShow(true);
-    setTimeout(() => {
+
+    if (scriptMasonry == true) {
       imagesLoaded(
         document.querySelector('.grid'),
         function (instance) {
@@ -21,14 +24,19 @@ const Gallery = (props) => {
           setLoaderShow(false);
         }
       );
-    }, 500);
-  }, [props]);
+    }
+  }, [props, scriptMasonry]);
 
   return (
     <>
       {loaderShow && <Loader />}
       <div className="container">
-        <Script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" />
+        <Script
+          src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+          onReady={() => {
+            setScriptMasonry(true);
+          }}
+        />
         <div
           id="animated-thumbnails"
           className={`grid ${classes.masonry} ${classes.allPost}`}
