@@ -99,3 +99,30 @@ p {
   width: 100%;
   border-radius: 15px;
 }
+
+/* ====== */
+.photowall ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-count: 12;
+
+  column-gap: 0px;
+}
+
+.photowall ul li img {
+  max-width: 100%;
+}
+
+.photowall{
+  background: #000;
+}
+
+.photowall ul li {
+  
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden;
+ 
+  background-repeat: no-repeat !important;
+}

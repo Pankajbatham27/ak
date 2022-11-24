@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import classes from './Testimonials.module.css';
 
-const Testimonials = () => {
+const Testimonials = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       $('#lightSlider').lightSlider({
@@ -22,28 +22,23 @@ const Testimonials = () => {
         id="lightSlider"
         className={`${classes.lightSlider} cs-hidden`}
       >
-        <li>
-          <div className={classes.innerTest}>
-            <p>
-              Lorem ipsum Cupidatat quis pariatur anim. Lorem ipsum
-              Excepteur amet adipisicing fugiat velit nisi. Lorem
-              ipsum Cupidatat quis pariatur anim. Lorem ipsum
-              Excepteur amet adipisicing fugiat velit nisi.
-              <i className="fa fa-quote-left"></i>
-            </p>
-            <h3>First Slide</h3>
-          </div>
-        </li>
-        <li>
-          <div className={classes.innerTest}>
-            <p>
-              Lorem ipsum Cupidatat quis pariatur anim. Lorem ipsum
-              Excepteur amet adipisicing fugiat velit nisi.
-              <i className="fa fa-quote-left"></i>
-            </p>
-            <h3>First Slide</h3>
-          </div>
-        </li>
+        {props.data.map((item, key) => (
+          <li key={key}>
+            <div className={classes.innerTest}>
+              <p>
+                {item.content}
+                <i className="fa fa-quote-left"></i>
+              </p>
+              <h3>
+                {item.title}
+                <br />
+                <small className={classes.font12}>
+                  ({item.designation})
+                </small>
+              </h3>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );

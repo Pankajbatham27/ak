@@ -30,9 +30,13 @@
         display: none;
     }
 }
+.font12{
+    font-size: 10px;
+    
+}
 
-.lightSlider li h3::before {
+/* .lightSlider li h3::before {
     content: "-------------";
     margin-right: 10px;
     letter-spacing: -3px;
-}
+} */

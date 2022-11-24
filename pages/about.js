@@ -11,7 +11,7 @@ export default function about(props) {
       <Header />
       <div className="container">
         <About data={props.aboutData.gettrecord} />
-        <Testimonials />
+        <Testimonials data={props.aboutData.gettesto} />
         <CallOut />
         <div className="mt-5">
           <AboutMore data={props.aboutData.gettrecord.footertxt} />
