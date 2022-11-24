@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import $ from 'jquery';
-import jQuery from 'jquery';
+// import $ from 'jquery';
+// import jQuery from 'jquery';
 
 const Photowall = () => {
   const [allPhotos, setAllPhotos] = useState([]);
@@ -73,40 +73,40 @@ const Photowall = () => {
     $('#ulWidth li').css('width', liWidth);
   }, 1000);
 
-  setInterval(() => {
-    var min = 1;
-    var max = $('#ulWidth li').length;
+  //   setInterval(() => {
+  //     var min = 1;
+  //     var max = $('#ulWidth li').length;
 
-    var randNumber = Math.floor(Math.random() * (max - min)) + min;
+  //     var randNumber = Math.floor(Math.random() * (max - min)) + min;
 
-    var randNumber2 = Math.floor(Math.random() * (max - min)) + min;
+  //     var randNumber2 = Math.floor(Math.random() * (max - min)) + min;
 
-    var tt = $('#ulWidth li:nth-child(' + randNumber + ')').css(
-      'background'
-    );
+  //     var tt = $('#ulWidth li:nth-child(' + randNumber + ')').css(
+  //       'background'
+  //     );
 
-    var pp = $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-      'background'
-    );
+  //     var pp = $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
+  //       'background'
+  //     );
 
-    $('#ulWidth li:nth-child(' + randNumber + ')')
-      .fadeOut(1000, function () {
-        $('#ulWidth li:nth-child(' + randNumber + ')').css(
-          'background',
-          'url(' + pp.split('"')[1] + ')'
-        );
-      })
-      .fadeIn(1000);
+  //     $('#ulWidth li:nth-child(' + randNumber + ')')
+  //       .fadeOut(1000, function () {
+  //         $('#ulWidth li:nth-child(' + randNumber + ')').css(
+  //           'background',
+  //           'url(' + pp.split('"')[1] + ')'
+  //         );
+  //       })
+  //       .fadeIn(1000);
 
-    $('#ulWidth li:nth-child(' + randNumber2 + ')')
-      .fadeOut(1400, function () {
-        $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-          'background',
-          'url(' + tt.split('"')[1] + ')'
-        );
-      })
-      .fadeIn(1400);
-  }, 3000);
+  //     $('#ulWidth li:nth-child(' + randNumber2 + ')')
+  //       .fadeOut(1400, function () {
+  //         $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
+  //           'background',
+  //           'url(' + tt.split('"')[1] + ')'
+  //         );
+  //       })
+  //       .fadeIn(1400);
+  //   }, 3000);
   return (
     <div className="photowall">
       <ul ref={componentRef} id="ulWidth">
