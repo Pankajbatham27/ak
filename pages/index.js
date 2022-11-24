@@ -23,7 +23,7 @@ export default function Home(props) {
         <CallOut />
         <Service data={props.serviceData} onlyTitle={true} />
         <Testimonials data={props.aboutData.gettesto} />
-        <Photowall data={props.randomimages} />
+        {/* <Photowall data={props.randomimages} /> */}
         {/* <Video /> */}
       </div>
       <Footer />
