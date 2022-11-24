@@ -95,6 +95,7 @@ const Photowall = (props) => {
       <ul ref={componentRef} id="ulWidth">
         {props.data.map((item, key) => (
           <li
+            key={key}
             style={{
               background: `url(${process.env.apiURl}uploads/gallery/medium/${item.image})`,
             }}
