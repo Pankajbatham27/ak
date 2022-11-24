@@ -23,7 +23,7 @@ export default function Home(props) {
         <CallOut />
         <Service data={props.serviceData} onlyTitle={true} />
         <Testimonials data={props.aboutData.gettesto} />
-        {/* <Photowall data={props.randomimages} /> */}
+        <Photowall />
         {/* <Video /> */}
       </div>
       <Footer />
@@ -42,16 +42,10 @@ export async function getServerSideProps() {
   );
   const data1 = await response1.json();
 
-  const response2 = await fetch(
-    `${process.env.apiURl}apicontroller/imagesRandom`
-  );
-  const data2 = await response2.json();
-
   return {
     props: {
       serviceData: data,
       aboutData: data1,
-      randomimages: data2,
     },
   };
 }

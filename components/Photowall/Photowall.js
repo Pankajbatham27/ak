@@ -1,8 +1,23 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import $ from 'jquery';
 import jQuery from 'jquery';
 
-const Photowall = (props) => {
+const Photowall = () => {
+  const [allPhotos, setAllPhotos] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const response2 = await fetch(
+        `${process.env.apiURl}apicontroller/imagesRandom`
+      );
+      const data2 = await response2.json();
+
+      setAllPhotos(data2);
+    }
+
+    getData();
+  }, []);
+
   const componentRef = useRef();
 
   setTimeout(() => {
@@ -95,7 +110,7 @@ const Photowall = (props) => {
   return (
     <div className="photowall">
       <ul ref={componentRef} id="ulWidth">
-        {props.data.map((item, key) => (
+        {allPhotos.map((item, key) => (
           <li
             key={key}
             style={{
