@@ -20,93 +20,98 @@ const Photowall = () => {
 
   const componentRef = useRef();
 
-  setTimeout(() => {
-    // console.log(componentRef.current.clientWidth);
+  useEffect(() => {
+    setTimeout(() => {
+      // console.log(componentRef.current.clientWidth);
 
-    var totalLi = $('#ulWidth li').length;
+      var totalLi = $('#ulWidth li').length;
 
-    if (componentRef.current.clientWidth > 1295) {
-      $('#ulWidth').css('column-count', 12);
-      var liWidth = componentRef.current.clientWidth / 12;
+      if (componentRef.current.clientWidth > 1295) {
+        $('#ulWidth').css('column-count', 12);
+        var liWidth = componentRef.current.clientWidth / 12;
 
-      for (let index = totalLi; index > 12 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
+        for (let index = totalLi; index > 12 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
+      } else if (componentRef.current.clientWidth > 1115) {
+        $('#ulWidth').css('column-count', 9);
+        var liWidth = componentRef.current.clientWidth / 9;
+
+        for (let index = totalLi; index > 9 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
+      } else if (componentRef.current.clientWidth > 935) {
+        $('#ulWidth').css('column-count', 6);
+        var liWidth = componentRef.current.clientWidth / 6;
+
+        for (let index = totalLi; index > 6 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
+      } else if (componentRef.current.clientWidth > 695) {
+        $('#ulWidth').css('column-count', 6);
+        var liWidth = componentRef.current.clientWidth / 6;
+
+        for (let index = totalLi; index > 6 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
+      } else if (componentRef.current.clientWidth > 515) {
+        $('#ulWidth').css('column-count', 6);
+        var liWidth = componentRef.current.clientWidth / 6;
+
+        for (let index = totalLi; index > 6 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
+      } else if (componentRef.current.clientWidth < 515) {
+        $('#ulWidth').css('column-count', 4);
+        var liWidth = componentRef.current.clientWidth / 4;
+
+        for (let index = totalLi; index > 4 * 3; index--) {
+          $('#ulWidth li:nth-child(' + index + ')').remove();
+        }
       }
-    } else if (componentRef.current.clientWidth > 1115) {
-      $('#ulWidth').css('column-count', 9);
-      var liWidth = componentRef.current.clientWidth / 9;
 
-      for (let index = totalLi; index > 9 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
-      }
-    } else if (componentRef.current.clientWidth > 935) {
-      $('#ulWidth').css('column-count', 6);
-      var liWidth = componentRef.current.clientWidth / 6;
+      $('#ulWidth li').css('height', liWidth);
+      $('#ulWidth li').css('width', liWidth);
+    }, 1000);
+  }, []);
 
-      for (let index = totalLi; index > 6 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
-      }
-    } else if (componentRef.current.clientWidth > 695) {
-      $('#ulWidth').css('column-count', 6);
-      var liWidth = componentRef.current.clientWidth / 6;
+  useEffect(() => {
+    setInterval(() => {
+      var min = 1;
+      var max = $('#ulWidth li').length;
 
-      for (let index = totalLi; index > 6 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
-      }
-    } else if (componentRef.current.clientWidth > 515) {
-      $('#ulWidth').css('column-count', 6);
-      var liWidth = componentRef.current.clientWidth / 6;
+      var randNumber = Math.floor(Math.random() * (max - min)) + min;
 
-      for (let index = totalLi; index > 6 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
-      }
-    } else if (componentRef.current.clientWidth < 515) {
-      $('#ulWidth').css('column-count', 4);
-      var liWidth = componentRef.current.clientWidth / 4;
+      var randNumber2 = Math.floor(Math.random() * (max - min)) + min;
 
-      for (let index = totalLi; index > 4 * 3; index--) {
-        $('#ulWidth li:nth-child(' + index + ')').remove();
-      }
-    }
+      var tt = $('#ulWidth li:nth-child(' + randNumber + ')').css(
+        'background'
+      );
 
-    $('#ulWidth li').css('height', liWidth);
-    $('#ulWidth li').css('width', liWidth);
-  }, 1000);
+      var pp = $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
+        'background'
+      );
 
-  //   setInterval(() => {
-  //     var min = 1;
-  //     var max = $('#ulWidth li').length;
+      $('#ulWidth li:nth-child(' + randNumber + ')')
+        .fadeOut(1000, function () {
+          $('#ulWidth li:nth-child(' + randNumber + ')').css(
+            'background',
+            'url(' + pp.split('"')[1] + ')'
+          );
+        })
+        .fadeIn(1000);
 
-  //     var randNumber = Math.floor(Math.random() * (max - min)) + min;
+      $('#ulWidth li:nth-child(' + randNumber2 + ')')
+        .fadeOut(1400, function () {
+          $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
+            'background',
+            'url(' + tt.split('"')[1] + ')'
+          );
+        })
+        .fadeIn(1400);
+    }, 3000);
+  }, []);
 
-  //     var randNumber2 = Math.floor(Math.random() * (max - min)) + min;
-
-  //     var tt = $('#ulWidth li:nth-child(' + randNumber + ')').css(
-  //       'background'
-  //     );
-
-  //     var pp = $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-  //       'background'
-  //     );
-
-  //     $('#ulWidth li:nth-child(' + randNumber + ')')
-  //       .fadeOut(1000, function () {
-  //         $('#ulWidth li:nth-child(' + randNumber + ')').css(
-  //           'background',
-  //           'url(' + pp.split('"')[1] + ')'
-  //         );
-  //       })
-  //       .fadeIn(1000);
-
-  //     $('#ulWidth li:nth-child(' + randNumber2 + ')')
-  //       .fadeOut(1400, function () {
-  //         $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-  //           'background',
-  //           'url(' + tt.split('"')[1] + ')'
-  //         );
-  //       })
-  //       .fadeIn(1400);
-  //   }, 3000);
   return (
     <div className="photowall">
       <ul ref={componentRef} id="ulWidth">
