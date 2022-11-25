@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
+import Script from 'next/script';
+import { useEffect, useState } from 'react';
 import classes from './Testimonials.module.css';
 
 const Testimonials = (props) => {
+  const [sliderReady, setSliderReady] = useState(false);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (sliderReady == true) {
       $('#lightSlider').lightSlider({
         item: 1,
         pager: false,
@@ -12,12 +15,19 @@ const Testimonials = (props) => {
           $('#lightSlider').removeClass('cs-hidden');
         },
       });
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    }
+  }, [sliderReady]);
 
   return (
     <div className="">
+      <Script
+        src="https://jhinichadariya.com/assets/front/lightslider.min.js"
+        onReady={() => {
+          console.log('slider jquery loaded');
+          setSliderReady(true);
+        }}
+      />
+
       <ul
         id="lightSlider"
         className={`${classes.lightSlider} cs-hidden`}

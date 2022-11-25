@@ -7,9 +7,6 @@ const Header = () => {
   const router = useRouter();
   return (
     <header className={classes.header}>
-      <Script src="https://code.jquery.com/jquery-3.6.0.js" />
-      <Script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" />
-      <Script src="https://jhinichadariya.com/assets/front/lightslider.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" />
       <div className={classes['header-logo']}>
         <Link href="/">

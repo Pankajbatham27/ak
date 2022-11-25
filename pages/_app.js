@@ -1,7 +1,11 @@
 import Head from 'next/head';
+import Script from 'next/script';
+import { useState } from 'react';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
+  const [jqeuryReady, setJqeuryReady] = useState(false);
+
   return (
     <>
       <Head>
@@ -47,7 +51,15 @@ function MyApp({ Component, pageProps }) {
       </Head>
       {/* {loading && <Loader />} */}
 
-      <Component {...pageProps} />
+      <Script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        onReady={() => {
+          console.log('test jquery loaded');
+          setJqeuryReady(true);
+        }}
+      />
+
+      {jqeuryReady && <Component {...pageProps} />}
     </>
   );
 }

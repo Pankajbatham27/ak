@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 // import $ from 'jquery';
 // import jQuery from 'jquery';
@@ -84,30 +85,12 @@ const Photowall = () => {
 
       var randNumber2 = Math.floor(Math.random() * (max - min)) + min;
 
-      var tt = $('#ulWidth li:nth-child(' + randNumber + ')').css(
-        'background'
-      );
-
-      var pp = $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-        'background'
-      );
-
-      $('#ulWidth li:nth-child(' + randNumber + ')')
-        .fadeOut(1000, function () {
-          $('#ulWidth li:nth-child(' + randNumber + ')').css(
-            'background',
-            'url(' + pp.split('"')[1] + ')'
-          );
-        })
+      $('#ulWidth li:nth-child(' + randNumber + ') img')
+        .fadeOut(1000)
         .fadeIn(1000);
 
-      $('#ulWidth li:nth-child(' + randNumber2 + ')')
-        .fadeOut(1400, function () {
-          $('#ulWidth li:nth-child(' + randNumber2 + ')').css(
-            'background',
-            'url(' + tt.split('"')[1] + ')'
-          );
-        })
+      $('#ulWidth li:nth-child(' + randNumber2 + ') img')
+        .fadeOut(1400)
         .fadeIn(1400);
     }, 3000);
   }, []);
@@ -116,12 +99,14 @@ const Photowall = () => {
     <div className="photowall">
       <ul ref={componentRef} id="ulWidth">
         {allPhotos.map((item, key) => (
-          <li
-            key={key}
-            style={{
-              background: `url(${process.env.apiURl}uploads/gallery/medium/${item.image})`,
-            }}
-          ></li>
+          <li key={key}>
+            <Image
+              src={`${process.env.apiURl}uploads/gallery/medium/${item.image}`}
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+          </li>
         ))}
       </ul>
     </div>

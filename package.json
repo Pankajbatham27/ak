@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "imagesloaded": "^5.0.0",
-    "jquery": "^3.6.1",
     "lightgallery": "^2.7.0",
     "masonry-layout": "^4.2.2",
     "next": "12.3.1",
