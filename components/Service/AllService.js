@@ -6,7 +6,7 @@ const AllService = (props) => {
   return (
     <div className={`row`}>
       {props.data.map((item, key) => (
-        <div key={key} className="col-md-4 gallery-grid">
+        <div key={key} className="col-md-4 col-6 gallery-grid">
           <div className={classes.serviceBlock}>
             {item.length != 0 ? (
               <figure>
@@ -20,7 +20,7 @@ const AllService = (props) => {
 
                 <figcaption>
                   <h2>{item.name}</h2>
-                  <p>{item.short_desp}</p>
+                  {/* <p>{item.short_desp}</p> */}
                   <Link href={`/service/${item.slug}`}>
                     View more
                   </Link>

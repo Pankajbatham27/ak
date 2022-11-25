@@ -21,9 +21,12 @@ export default function Home(props) {
 
         <About data={props.aboutData.gettrecord} />
         <CallOut />
+        <div className="mt-5">
+          <Photowall />
+        </div>
         <Service data={props.serviceData} onlyTitle={true} />
         <Testimonials data={props.aboutData.gettesto} />
-        <Photowall />
+
         {/* <Video /> */}
       </div>
       <Footer />
