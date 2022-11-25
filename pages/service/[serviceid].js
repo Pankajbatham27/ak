@@ -9,7 +9,7 @@ const ServiceDetails = (props) => {
   const router = useRouter();
 
   const [serviceImage, setServiceImage] = useState([]);
-  const [totalPage, setTotalPage] = useState(0);
+  const [totalPage, setTotalPage] = useState(props.data.total_pages);
   const [page, setPage] = useState(1);
   const [slider, setSlider] = useState(0);
 
@@ -18,20 +18,16 @@ const ServiceDetails = (props) => {
   }, [props]);
 
   useEffect(() => {
-    setTotalPage(props.data.total_pages);
-
-    setTimeout(() => {
-      const lg = document.getElementById('animated-thumbnails');
-      var plugin = lightGallery(lg, {
-        // plugins: [lgThumbnail],
-        toggleThumb: true,
-        speed: 500,
-        // thumbnail: true,
-        download: false,
-      });
-      setSlider(plugin);
-    }, 1000);
-  }, []);
+    const lg = document.getElementById('animated-thumbnails');
+    var plugin = lightGallery(lg, {
+      // plugins: [lgThumbnail],
+      toggleThumb: true,
+      speed: 500,
+      // thumbnail: true,
+      download: false,
+    });
+    setSlider(plugin);
+  }, [serviceImage]);
 
   async function getMoreData(page) {
     const response = await fetch(
@@ -47,9 +43,7 @@ const ServiceDetails = (props) => {
 
     setPage((page) => page + 1);
 
-    setTimeout(() => {
-      slider.refresh();
-    }, 1000);
+    slider.refresh();
   }
 
   return (
