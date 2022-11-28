@@ -43,6 +43,7 @@ const ServiceDetails = (props) => {
 
     setPage((page) => page + 1);
 
+    slider.destroy();
     slider.refresh();
   }
 

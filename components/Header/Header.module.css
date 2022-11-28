@@ -13,3 +13,7 @@
     text-transform: uppercase;
     font-size: 13px;
 }
+
+.header img {
+    cursor: pointer;
+}

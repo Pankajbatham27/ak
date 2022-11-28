@@ -9,7 +9,7 @@ export default function about(props) {
       <Header />
       <div className="container">
         <Service data={props.data} onlyTitle={true} />
-        <CallOut />
+        {/* <CallOut /> */}
       </div>
       {/* <Services /> */}
       <Footer />

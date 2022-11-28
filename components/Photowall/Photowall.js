@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-// import $ from 'jquery';
+import $ from 'jquery';
 // import jQuery from 'jquery';
 
 const Photowall = () => {
