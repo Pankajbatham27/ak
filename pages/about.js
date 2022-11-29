@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import AboutMore from '../components/About/AboutMore';
@@ -63,6 +64,9 @@ export default function AboutPage(props) {
           setSliderReady(true);
         }}
       />
+      <Head>
+        <title>Know More about WedKnox</title>
+      </Head>
 
       <Header />
       <div className="container">

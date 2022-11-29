@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Blogs from '../components/Blogs/Blogs';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
@@ -5,6 +6,9 @@ import Header from '../components/Header/Header';
 const blogs = (props) => {
   return (
     <>
+      <Head>
+        <title>Blogs | WedKnox</title>
+      </Head>
       <Header />
       <div className="container">
         <Blogs data={props.data} />

@@ -4,6 +4,7 @@ import Header from './../../components/Header/Header';
 import Footer from './../../components/Footer/Footer';
 import { useRouter } from 'next/router';
 import lightGallery from 'lightgallery';
+import Head from 'next/head';
 
 const ServiceDetails = (props) => {
   const router = useRouter();
@@ -49,6 +50,9 @@ const ServiceDetails = (props) => {
 
   return (
     <>
+      <Head>
+        <title>{props.data.gettrecord.name} | WedKnox Service</title>
+      </Head>
       <Header />
       <Gallery serviceImage={serviceImage} />
 

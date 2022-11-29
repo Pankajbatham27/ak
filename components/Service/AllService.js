@@ -20,7 +20,7 @@ const AllService = (props) => {
 
                 <figcaption>
                   <h2>{item.name}</h2>
-                  {/* <p>{item.short_desp}</p> */}
+                  <p>{item.short_desp}</p>
                   <Link href={`/service/${item.slug}`}>
                     View more
                   </Link>

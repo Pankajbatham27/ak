@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
@@ -7,6 +8,9 @@ import Loader from '../../components/Loader/Loader';
 const blog = (blog) => {
   return (
     <>
+      <Head>
+        <title>{blog.data.title} | WedKnox</title>
+      </Head>
       <Header />
       <div className="container">
         <div className="blogFull">

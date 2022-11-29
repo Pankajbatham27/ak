@@ -43,7 +43,12 @@ const Gallery = (props) => {
         >
           {props.serviceImage.map((item, key) => (
             <div
-              data-sub-html={`<a href="/hashtag/${item.hashtag}">${item.hashtag}</a>`}
+              data-sub-html={item.hashtag
+                .split(',')
+                .map(
+                  (item1, key) =>
+                    `<a href="/hashtag/${item1}">${item1}</a>`
+                )}
               key={key}
               href={`${process.env.apiURl}uploads/gallery/${item.image}`}
               className="grid-item"

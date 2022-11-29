@@ -1,25 +1,42 @@
+import Head from 'next/head';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Header from './../components/Header/Header';
-export default function about() {
+export default function contact(props) {
   return (
     <>
+      <Head>
+        <title>
+          Contact with WedKnox for photography inquiry. WhatsApp |
+          Contact Form
+        </title>
+      </Head>
       <Header />
       <div className="container">
-        <Contact />
+        <Contact data={props.contactData} />
 
         <div className="mt-5">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14661.659551977067!2d77.4243175!3d23.2643698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x81f3433cb0800576!2sAK%20BROTHERS%20PHOTOGRAPHY!5e0!3m2!1sen!2sin!4v1667815911162!5m2!1sen!2sin"
+            src={props.contactData.map}
             width="100%"
             height="450"
-            allowfullscreen=""
+            allowFullScreen
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
           />
         </div>
       </div>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const response = await fetch(
+    `${process.env.apiURl}apicontroller/contact`
+  );
+  const data = await response.json();
+
+  return {
+    props: { contactData: data },
+  };
 }

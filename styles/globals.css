@@ -130,3 +130,6 @@ p {
 ul#ulWidth li {
   position: relative;
 }
+a.nav-link.active {
+  font-weight: 600;
+}

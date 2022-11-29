@@ -53,14 +53,12 @@ export default function Home(props) {
       <Script
         src="https://code.jquery.com/jquery-3.6.0.js"
         onReady={() => {
-          console.log('test jquery loaded');
           setJqeuryReady(true);
         }}
       />
       <Script
         src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
         onReady={() => {
-          console.log('call jquery loaded');
           setJqeuryUiReady(true);
         }}
       />
@@ -68,23 +66,26 @@ export default function Home(props) {
       <Script
         src="https://jhinichadariya.com/assets/front/lightslider.min.js"
         onReady={() => {
-          console.log('slider jquery loaded');
           setSliderReady(true);
         }}
       />
-
+      <Head>
+        <title>
+          Creative and Morden Photography by WedKnox | Bhopal
+        </title>
+      </Head>
       <Header />
       <div className="container">
         <Hero />
 
         <About data={props.aboutData.gettrecord} />
         <CallOut />
+
+        <Service data={props.serviceData} onlyTitle={true} />
+        <Testimonials data={props.aboutData.gettesto} />
         <div className="mt-5">
           <Photowall />
         </div>
-        <Service data={props.serviceData} onlyTitle={true} />
-        <Testimonials data={props.aboutData.gettesto} />
-
         {/* <Video /> */}
       </div>
       <Footer />
