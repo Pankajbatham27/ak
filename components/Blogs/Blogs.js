@@ -6,25 +6,13 @@ import Loader from './../Loader/Loader';
 import Link from 'next/link';
 
 const Blogs = (props) => {
-  //   const [blogs, setBlogs] = useState([]);
   const [loaderShow, setLoaderShow] = useState(true);
-
-  //   async function getdata() {
-  //     const response = await fetch(
-  //       `${process.env.apiURl}apicontroller/blogs`
-  //     );
-
-  //     const res = await response.json();
-
-  //     setBlogs(res);
-  //   }
-  //   useEffect(() => {
-  //     getdata();
-  //   }, []);
+  const [scriptMasonry, setScriptMasonry] = useState(false);
 
   useEffect(() => {
     setLoaderShow(true);
-    setTimeout(() => {
+
+    if (scriptMasonry == true) {
       imagesLoaded(
         document.querySelector('.grid'),
         function (instance) {
@@ -35,16 +23,21 @@ const Blogs = (props) => {
           setLoaderShow(false);
         }
       );
-    }, 500);
-  }, [props]);
+    }
+  }, [props, scriptMasonry]);
 
   return (
     <div className="mian_div_blog">
-      <Script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" />
+      <Script
+        src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+        onReady={() => {
+          setScriptMasonry(true);
+        }}
+      />
       {loaderShow && <Loader />}
-      <div class="grid">
+      <div className="grid">
         {props.data.map((item, key) => (
-          <div key={key} class="grid-item">
+          <div key={key} className="grid-item">
             <div className={classes.insideBlog}>
               <img
                 src={`${process.env.apiURl}uploads/allimgs/${item.blogpic}`}

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.css';
+import NextNProgress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }) {
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         ></link>
       </Head>
-
+      <NextNProgress />
       <Component {...pageProps} />
     </>
   );
