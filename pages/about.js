@@ -7,7 +7,7 @@ import Service from '../components/Service/Service';
 import Testimonials from '../components/Testimonials/Testimonials';
 import About from './../components/About/About';
 import Header from './../components/Header/Header';
-export default function about(props) {
+export default function AboutPage(props) {
   const [jqeuryUiReady, setJqeuryUiReady] = useState(false);
   const [jqeuryReady, setJqeuryReady] = useState(false);
   const [sliderReady, setSliderReady] = useState(false);

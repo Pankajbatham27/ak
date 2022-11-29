@@ -1,5 +1,4 @@
 import classes from './About.module.css';
-// import design from './../../../public/images/design.jpg';
 import $ from 'jquery';
 const About = (props) => {
   return (
